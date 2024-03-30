@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 
 # Load dataset into a Pandas DataFrame
@@ -37,5 +37,5 @@ def predict():
     return jsonify({'predictions': y_pred.tolist()})
 
 
-if _name_ == '_main_':
+if _name_ == '__main__':
     app.run(debug=True)
